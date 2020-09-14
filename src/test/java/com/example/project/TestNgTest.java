@@ -49,14 +49,16 @@ public class TestNgTest extends Base {
 		captureScreenShot("captureScreenShot1");
 		Assert.assertTrue(1>2,"The item is lesser than");
 	}
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void captureScreenShot() throws Exception { 
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.facebook.com");
 		captureScreenShot("captureScreenShot1");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("bishal.malla@gmail.com");
 		captureScreenShot("captureScreenShot2");
-	}*/
+	}
 	@AfterMethod
 	public void afterTest() {
 		driver.quit();

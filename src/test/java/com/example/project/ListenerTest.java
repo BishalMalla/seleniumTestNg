@@ -82,9 +82,9 @@ public class ListenerTest extends Base implements ITestListener {
 		        }
 		        System.out.println(images);
 				this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
-		       // for(File f: files){
-				//	f.delete();
-		       // }
+		        for(File f: files){
+					f.delete();
+		        }
 		        
 			} else {
 				//this.logTestRunResult(testPlanKeyValue.toString(), testCaseKeyValue.toString(), "FAIL");
@@ -153,23 +153,23 @@ public class ListenerTest extends Base implements ITestListener {
 					System.out.println("Passed");
 					System.out.println(testMethod);
 					List<FileInformation> images = new ArrayList<FileInformation>();
-					File file = new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots");
+					File file = new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots");
 			        File[] files = file.listFiles();
 			        for(File f: files){
 			        	FileInformation image = new FileInformation();
-			        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots\\"+f.getName()));
+			        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots\\"+f.getName()));
 						String encodedString = Base64.getEncoder().encodeToString(fileContent);
 						System.out.println(encodedString);
 						image.setFilename(f.getName());
 						image.setBase64Img(encodedString);
+						System.out.println(image.toString());
 						images.add(image);
 			        }
-			        System.out.print(images);
-					this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "PASS", testMethod,images);
-			        for(File f: files){
-						//FileUtils.de; 
-			        	f.delete();
-			        }
+			        System.out.println(images);
+					this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
+			        //for(File f: files){
+						//f.delete();
+			        //}
 				} else {
 					//this.logTestRunResult(testPlanKeyValue.toString(), testCaseKeyValue.toString(), "PASS");
 				}			
