@@ -68,11 +68,11 @@ public class ListenerTest extends Base implements ITestListener {
 				System.out.println(testMethod);
 				
 				List<FileInformation> images = new ArrayList<FileInformation>();
-				File file = new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots");
+				File file = new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots");
 		        File[] files = file.listFiles();
 		        for(File f: files){
 		        	FileInformation image = new FileInformation();
-		        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots\\"+f.getName()));
+		        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots\\"+f.getName()));
 					String encodedString = Base64.getEncoder().encodeToString(fileContent);
 					System.out.println(encodedString);
 					image.setFilename(f.getName());

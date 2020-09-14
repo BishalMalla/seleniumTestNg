@@ -17,6 +17,8 @@ public class Base {
 	public static WebDriver driver;
 	
 	public static void initialization() {
+		//System.setProperty("webdriver.gecko.driver","C:\\Users\\bimalla\\Documents\\geckodriver.exe");
+		//File pathBinary = new File("C:\\Users\\bimalla\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\usa-srgopalakrishnan\\Downloads\\geckodriver.exe");
 		File pathBinary = new File("C:\\Program Files\\Mozilla Firefox.exe");
 		FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
@@ -31,7 +33,8 @@ public class Base {
 			TakesScreenshot ts =(TakesScreenshot)driver;			
 			File file = ts.getScreenshotAs(OutputType.FILE);
 			try {
-				FileUtils.copyFile(file,new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots\\" + screenshotName + ".png"));
+				//FileUtils.copyFile(file,new File("C:\\Users\\bimalla\\git\\repository\\junit-jenkin-test-master\\Screenshots\\" + screenshotName + ".png"));
+				FileUtils.copyFile(file,new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots\\" + screenshotName + ".png"));
 				System.out.println("Screenshot Taken");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
