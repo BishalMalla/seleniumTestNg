@@ -82,9 +82,9 @@ public class ListenerTest extends Base implements ITestListener {
 		        }
 		        System.out.println(images);
 				this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
-		        for(File f: files){
-					f.delete();
-		        }
+		       // for(File f: files){
+				//	f.delete();
+		       // }
 		        
 			} else {
 				//this.logTestRunResult(testPlanKeyValue.toString(), testCaseKeyValue.toString(), "FAIL");
