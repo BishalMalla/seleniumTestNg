@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 
 @Listeners(ListenerTest.class)
@@ -41,6 +43,8 @@ public class TestNgTest extends Base {
 	@Test(priority=6)
 	void negativeTestCase() {
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.twitter.com");
 		captureScreenShot("captureScreenShot1");
 		Assert.assertTrue(1>2,"The item is lesser than");
