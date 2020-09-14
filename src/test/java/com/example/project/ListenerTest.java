@@ -21,7 +21,7 @@ import org.testng.ITestResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ListenerTest extends Base implements ITestListener {
-	private String jenkinEndppoint = "http://10.25.33.47:8084/ords/prod/twb/service/jenkin";
+	private String jenkinEndppoint = "http://10.25.33.47:8084/ords/dev_anthem/twb/service/jenkin";
 	
 	
 	@Override
