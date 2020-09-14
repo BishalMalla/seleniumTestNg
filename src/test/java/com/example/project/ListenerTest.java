@@ -81,7 +81,7 @@ public class ListenerTest extends Base implements ITestListener {
 					images.add(image);
 		        }
 		        System.out.println(images);
-				this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images.toString());
+				this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
 		        for(File f: files){
 					f.delete();
 		        }
@@ -166,7 +166,7 @@ public class ListenerTest extends Base implements ITestListener {
 						images.add(image);
 			        }
 			        System.out.println(images);
-					this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images.toString());
+					this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
 			        //for(File f: files){
 						//f.delete();
 			        //}
@@ -188,7 +188,7 @@ public class ListenerTest extends Base implements ITestListener {
 			} 
 		}
 	 
-	 private void logTestRunJenkinResult(String jenkinJobName, String jenkinBuildId, String status, String testMethod, String base64_image) {
+	 private void logTestRunJenkinResult(String jenkinJobName, String jenkinBuildId, String status, String testMethod, List<FileInformation> base64_image) {
 			URL url;
 			try {
 				url = new URL(this.jenkinEndppoint);
