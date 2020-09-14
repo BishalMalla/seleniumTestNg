@@ -17,8 +17,8 @@ public class Base {
 	public static WebDriver driver;
 	
 	public static void initialization() {
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\bimalla\\Documents\\geckodriver.exe");
-		File pathBinary = new File("C:\\Users\\bimalla\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\usa-srgopalakrishnan\\Downloads\\geckodriver.exe");
+		File pathBinary = new File("C:\\Program Files\\Mozilla Firefox.exe");
 		FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
 		DesiredCapabilities desired = DesiredCapabilities.firefox();
 		FirefoxOptions options = new FirefoxOptions();
