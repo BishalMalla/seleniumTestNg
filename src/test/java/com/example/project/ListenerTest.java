@@ -74,13 +74,13 @@ public class ListenerTest extends Base implements ITestListener {
 		        	FileInformation image = new FileInformation();
 		        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots\\"+f.getName()));
 					String encodedString = Base64.getEncoder().encodeToString(fileContent);
-					System.out.println(encodedString);
+					//System.out.println(encodedString);
 					image.setFilename(f.getName());
 					image.setBase64Img(encodedString);
-					System.out.println(image.toString());
+					//System.out.println(image.toString());
 					images.add(image);
 		        }
-		        System.out.println(images);
+		        //System.out.println(images);
 				this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
 		        for(File f: files){
 					f.delete();
@@ -159,13 +159,13 @@ public class ListenerTest extends Base implements ITestListener {
 			        	FileInformation image = new FileInformation();
 			        	byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\usa-srgopalakrishnan\\Screenshots\\"+f.getName()));
 						String encodedString = Base64.getEncoder().encodeToString(fileContent);
-						System.out.println(encodedString);
+						//System.out.println(encodedString);
 						image.setFilename(f.getName());
 						image.setBase64Img(encodedString);
-						System.out.println(image.toString());
+						//System.out.println(image.toString());
 						images.add(image);
 			        }
-			        System.out.println(images);
+			        //System.out.println(images);
 					this.logTestRunJenkinResult(jenkinJobName, jenkinBuildId, "FAIL", testMethod, images);
 			        for(File f: files){
 						f.delete();
